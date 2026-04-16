@@ -1,19 +1,22 @@
 # [ACL 2026 Findings] <span style="color: orange">MSVBench</span>: Towards Human-Level Evaluation of Multi-Shot Video Generation
 
 <!-- <a href="https://vistorybench.github.io/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Web&color=green"></a> &ensp; -->
-<a href="https://arxiv.org/abs/2602.23969"><img src="https://img.shields.io/static/v1?label=Tech%20Report&message=Arxiv&color=red"></a> &ensp;
-<!-- <a href="https://huggingface.co/datasets/ViStoryBench/ViStoryBench"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=orange"></a> &ensp; -->
+<a src="https://img.shields.io/badge/cs.MM-2602.23969-b31b1b?logo=arxiv&logoColor=red" href="https://arxiv.org/abs/2602.23969"> <img src="https://img.shields.io/badge/cs.MM-2602.23969-b31b1b?logo=arxiv&logoColor=red"></a> 
+<a href="https://huggingface.co/datasets/MrSunshy/MSVBench"><img src="https://img.shields.io/static/v1?label=Dataset&message=HuggingFace&color=orange"></a> &ensp;
 <!-- ![image](https://github.com/user-attachments/assets/461d95ca-51cf-4b16-a584-be5b36c904db) -->
 
 ## 🎏 Overview
+### Dataset Construction
 ![MSVBench Dataset](Assets/Dataset.png)
 
 <p><b>MSVBench Dataset</b> adopts a hierarchical data construction paradigm that decomposes complex stories into global priors, scene-level segments, and shot-level conditions.</p>
 
+### Evaluation Metrics
 ![MSVBench Evaluation Metrics](Assets/Metrics.png)
 
 <p><b>MSVBench Evaluation Metrics</b> establishes an innovative hybrid evaluation framework that integrates the high-level semantic reasoning of Large Multimodal Models (LMMs) with the fine-grained perceptual rigor of domain-specific expert models.</p>
 
+### Leaderboard
 ![MSVBench LeaderBoard](Assets/LeaderBoard.png)
 
 <p><b>MSVBench LeaderBoard</b> presents a thorough evaluation of 20 diverse video generation methods. </p>
@@ -88,7 +91,6 @@ Evaluation/data/videos/<story_id>/*.mp4
 ### Run Evaluation
 
 ```bash
-cd Github/MSVBench
 bash MSVBench.sh
 ```
 
@@ -108,7 +110,6 @@ SUBMETRICS="story_alignment=blip_bleu_score,shot_perspective_alignment;motion_qu
 Run one single case directly:
 
 ```bash
-cd Github/MSVBench
 METHOD=<method> STORY_ID="01" python3 MSVBench.py
 ```
 
